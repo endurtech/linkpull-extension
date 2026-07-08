@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkPull</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    html {
+      background-color: #050f10;
+    }
+  </style>
+</head>
+<body>
+  <div id="updateNotification" class="update-notification hidden">
+    <div class="update-header">
+      <span class="update-title">&#x26A1; WELCOME TO LINKPULL</span>
+      <span id="closeUpdate" class="close-update">&#x2715;</span>
+    </div>
+    <div class="update-content">
+      <p>Highlight any URL on a page and click the pull icon, or <strong>right-click</strong> a link, to grab the file straight to your downloads.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="label-container">
+      <img src="icons/LP_icon_512x512.png" alt="LinkPull Icon" class="label-icon">
+      <label for="downloadUrl">File Link:</label>
+    </div>
+    <div class="input-wrapper">
+      <input type="text" id="downloadUrl" placeholder="Enter file URL">
+      <div id="urlValidityIndicator" class="url-validity-indicator"></div>
+    </div>
+    <button id="downloadBtn">Pull It</button>
+    <div id="errorMessage" class="error-message"></div>
+  </div>
+  
+  <div id="historyContainer" class="history-container">
+    <div class="history-header">
+      <span>Download History</span>
+      <span id="clearHistory" class="clear-history">Clear</span>
+    </div>
+    <div id="historyList" class="history-list">
+      <div class="empty-history">No download history</div>
+    </div>
+  </div>
+
+  <div class="url-info">
+    <div class="info-header">URL Requirements</div>
+    <div class="info-content">
+      <ul>
+        <li>URLs must end with a file extension (e.g., .pdf, .zip, .mp4, etc.)</li>
+        <li>Direct links to file hosting services usually work best</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer"><a href="https://github.com/endurtech/linkpull-extension" target="_blank" rel="noopener noreferrer" class="footer-link"><em>github</em></a> | <a href="https://endurtech.com/give-thanks/" target="_blank" rel="noopener noreferrer" class="footer-link"><em>support</em></a></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
